@@ -24,16 +24,29 @@ export default async function BookInfo({ id }: { id: string }) {
   return (
     <div>
       <h1 className={bookInfo.title}>{results.list_name}</h1>
-      <ul>
+      <ul className={bookInfo.bookList}>
         {results.books.map((book: Book) => {
           return (
-            <li key={book.primary_isbn10}>
-              <img src={book.book_image} alt={book.title} />
-              <h2>{book.title}</h2>
-              <p>{book.author}</p>
-              <a href={book.amazon_product_url} target={"_blank"}>
-                Buy now &rarr;
-              </a>
+            <li key={book.primary_isbn10} className={bookInfo.bookItem}>
+              <img
+                src={book.book_image}
+                alt={book.title}
+                className={bookInfo.poster}
+              />
+              <div className={bookInfo.bookInfo}>
+                <h2 className={bookInfo.bookInfo__title}>{book.title}</h2>
+                <p className={bookInfo.bookInfo__author}>{book.author}</p>
+
+                <div>
+                  <a
+                    href={book.amazon_product_url}
+                    target={"_blank"}
+                    className={bookInfo.bookInfo__link}
+                  >
+                    Buy now &rarr;
+                  </a>
+                </div>
+              </div>
             </li>
           );
         })}

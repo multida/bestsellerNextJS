@@ -1,3 +1,45 @@
 .title {
-  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 36px;
+}
+
+.poster {
+  max-width: 100%;
+}
+
+.bookList {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.bookItem {
+  border: 1px solid #222;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 10px;
+  padding: 10px;
+}
+
+.bookInfo__title {
+  font-size: 18px;
+  word-break: break-word;
+}
+
+.bookInfo__author {
+  font-size: 14px;
+  color: #2699e6;
+}
+
+.bookInfo__link {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #222;
 }
