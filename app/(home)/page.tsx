@@ -6,11 +6,6 @@ export const metadata = {
   title: "Home",
 };
 
-interface IBookType {
-  id: string;
-  book: string;
-  list_name: string;
-}
 export interface IBookList {
   results: {
     list_name: string;
