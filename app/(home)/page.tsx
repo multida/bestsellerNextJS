@@ -27,8 +27,9 @@ export default async function HomePage() {
   const books = await getBooks();
   return (
     <div className={styles.container}>
-      {books.results.map((book) => (
+      {books.results.map((book, key) => (
         <Book
+          key={book.list_name}
           list_name_encoded={book.list_name_encoded}
           list_name={book.list_name}
         />

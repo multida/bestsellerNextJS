@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { API_DETAIL } from "../app/constants";
 import bookInfo from "../styles/book-info.module.css";
 
@@ -29,7 +28,7 @@ export default async function BookInfo({ id }: { id: string }) {
         {results.books.map((book: Book) => {
           return (
             <li key={book.primary_isbn10} className={bookInfo.bookItem}>
-              <Image
+              <img
                 src={book.book_image}
                 alt={book.title}
                 className={bookInfo.poster}

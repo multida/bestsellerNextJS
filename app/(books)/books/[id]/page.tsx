@@ -2,10 +2,6 @@ import React from "react";
 import { Suspense } from "react";
 import BookInfo, { getBook } from "../../../../components/book-info";
 
-type IParams = Promise<{
-  list_name_encoded: string;
-}>;
-
 export async function generateMetadata({
   params,
 }: {
