@@ -1,0 +1,26 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  padding: 20px 30px;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  border-bottom: 1px solid #222;
+  background-color: #ededed;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.nav ul li {
+  list-style: none;
+  transform: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.nav ul li:hover {
+  transform: scale(1.05);
+}
