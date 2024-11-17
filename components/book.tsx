@@ -12,7 +12,7 @@ export default function Book({ list_name_encoded, list_name }: IBookProps) {
   return (
     <>
       <div key={list_name_encoded} className={styles.bookTitle}>
-        <Link href={`/lists/${list_name_encoded}`}>{list_name} &rarr;</Link>
+        <Link href={`/books/${list_name_encoded}`}>{list_name} &rarr;</Link>
         {/* 
         <Link prefetch href={`/lists/${list_name_encoded}`}>
           {list_name} &rarr;

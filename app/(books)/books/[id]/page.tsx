@@ -1,6 +1,6 @@
 import React from "react";
 import { Suspense } from "react";
-import BookdInfo, { getBook } from "../../../../components/book-info";
+import BookInfo, { getBook } from "../../../../components/book-info";
 
 type IParams = Promise<{
   list_name_encoded: string;
@@ -18,12 +18,16 @@ export async function generateMetadata({
   };
 }
 
-export default async function MovieDetailPage(props: { params: IParams }) {
+export default async function MovieDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   return (
     <div>
       <Suspense fallback={<h1>Loading book info</h1>}>
-        <BookdInfo id={id} />
+        <BookInfo id={id} />
       </Suspense>
     </div>
   );
